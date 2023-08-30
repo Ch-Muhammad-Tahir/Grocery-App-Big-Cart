@@ -22,6 +22,7 @@ class WelcomeImageStack extends StatelessWidget {
             top: 31,
             left: 20,
             child: CustomIconButton(
+              child: Image.asset(AppAssets.backArrow),
               backgroundColor: Colors.transparent,
               onTab: () {},
             )),

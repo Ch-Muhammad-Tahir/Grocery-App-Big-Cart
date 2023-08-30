@@ -7,6 +7,7 @@ import 'package:e_commerce_store_ui/views/home_page_screen/home_page_screen_widg
 import 'package:e_commerce_store_ui/widgets/custom_size_box.dart';
 
 import '../../../utils/app_strings.dart';
+import '../../../utils/helper_functions.dart';
 import '../../../utils/media_query.dart';
 import '../../../widgets/customText.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -42,6 +43,9 @@ class CategorySection extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return CategoryTileView(
+                    onTab: () {
+                      AppCommonFunctions.printLog("Hello");
+                    },
                     category: AppConstants.categories[index]);
               },
               separatorBuilder: (context, index) {

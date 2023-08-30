@@ -27,10 +27,10 @@ class FeatureSection extends StatelessWidget {
             // padding: EdgeInsets.all(screenSize * 0.17),
             itemCount: 10,
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                mainAxisExtent: screenSize * 0.70,
+                childAspectRatio: 0.65,
                 crossAxisSpacing: screenSize * 0.04,
                 mainAxisSpacing: screenSize * 0.04),
             itemBuilder: (context, index) {

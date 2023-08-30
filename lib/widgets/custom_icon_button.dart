@@ -5,16 +5,20 @@ class CustomIconButton extends StatelessWidget {
   final Color? backgroundColor;
   final VoidCallback onTab;
   final double radius;
-
+  final Widget child;
   const CustomIconButton(
-      {super.key, this.backgroundColor, this.radius = 0, required this.onTab});
+      {super.key,
+      this.backgroundColor,
+      this.radius = 0,
+      required this.onTab,
+      required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Material(
       borderRadius: BorderRadius.circular(radius),
       color: backgroundColor,
-      child: InkWell(onTap: onTab, child: Image.asset(AppAssets.backArrow)),
+      child: InkWell(onTap: onTab, child: child),
     );
   }
 }
