@@ -15,6 +15,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widgets/top_section_tile.dart';
+import '../../products_screen/product_screen_widget.dart';
 
 class CategorySection extends StatelessWidget {
   const CategorySection({super.key});
@@ -45,6 +46,13 @@ class CategorySection extends StatelessWidget {
                 return CategoryTileView(
                     onTab: () {
                       AppCommonFunctions.printLog("Hello");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductScreenWidget(
+                                    category:
+                                        AppConstants.categories[index].name,
+                                  )));
                     },
                     category: AppConstants.categories[index]);
               },

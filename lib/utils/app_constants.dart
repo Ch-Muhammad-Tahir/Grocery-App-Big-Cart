@@ -1,4 +1,5 @@
 import 'package:e_commerce_store_ui/models/category_model.dart';
+import 'package:e_commerce_store_ui/models/product_model.dart';
 import 'package:e_commerce_store_ui/utils/app_assets.dart';
 import 'package:e_commerce_store_ui/utils/app_colors.dart';
 import 'package:e_commerce_store_ui/utils/app_strings.dart';
@@ -29,6 +30,44 @@ class AppConstants {
         name: AppString.household,
         svgImagepath: AppAssets.houseHoldIcon,
         backGroundColor: AppColors.householdColor),
+  ];
+
+  static List<ProductModel> products = [
+    ProductModel.add(
+        productName: AppString.pineapple,
+        productImage: AppAssets.pineapple,
+        productPrice: AppString.pineapplePrice,
+        productWeight: "1.0 lbs",
+        isFavorite: false,
+        isNew: true),
+    ProductModel.add(
+        productName: AppString.freshPeach,
+        productImage: AppAssets.peach,
+        productPrice: "15.00",
+        productWeight: "1.5 lbs",
+        isFavorite: true,
+        isNew: false),
+    ProductModel.add(
+        productName: AppString.roccoli,
+        productImage: AppAssets.roccoli,
+        productPrice: AppString.roccoliPrice,
+        productWeight: "2.0 lbs",
+        isFavorite: false,
+        isNew: false),
+    ProductModel.add(
+        productName: AppString.pineapple,
+        productImage: AppAssets.pineapple,
+        productPrice: AppString.pineapplePrice,
+        productWeight: "1.0 lbs",
+        isFavorite: false,
+        isNew: false),
+    ProductModel.add(
+        productName: AppString.roccoli,
+        productImage: AppAssets.roccoli,
+        productPrice: AppString.roccoliPrice,
+        productWeight: "2.0 lbs",
+        isFavorite: true,
+        isNew: true),
   ];
 
   static List<String> slideImages = [

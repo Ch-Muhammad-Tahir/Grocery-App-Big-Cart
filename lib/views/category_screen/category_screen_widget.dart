@@ -3,6 +3,7 @@ import 'package:e_commerce_store_ui/utils/app_constants.dart';
 import 'package:e_commerce_store_ui/utils/helper_functions.dart';
 import 'package:e_commerce_store_ui/utils/media_query.dart';
 import 'package:e_commerce_store_ui/views/home_page_screen/home_page_screen_widgets/category_tile_view.dart';
+import 'package:e_commerce_store_ui/views/products_screen/product_screen_widget.dart';
 import 'package:e_commerce_store_ui/widgets/customText.dart';
 import 'package:flutter/material.dart';
 
@@ -39,11 +40,18 @@ class CategoryScreenWidget extends StatelessWidget {
           itemBuilder: (context, index) {
             return Container(
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(2)),
+                  color: Color.fromRGBO(255, 251, 251, 1),
+                  borderRadius: BorderRadius.circular(2)),
               child: Align(
                 child: CategoryTileView(
                   onTab: () {
                     AppCommonFunctions.printLog("Hello");
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProductScreenWidget(
+                                  category: AppConstants.categories[index].name,
+                                )));
                   },
                   category: AppConstants.categories[index],
                 ),

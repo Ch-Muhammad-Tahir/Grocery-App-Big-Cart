@@ -20,4 +20,9 @@ class AppAssets {
   static String image2 = "assets/images/ella-olsson-rD3YrnhTmf0-unsplash 1.png";
   static String image3 = "assets/images/brooke-lark-HlNcigvUi4Q-unsplash.jpg";
   static String image4 = "assets/images/brooke-lark-08bOYnH_r_E-unsplash.jpg";
+
+  static String aocado = "assets/images/aocado-2 1.png";
+  static String roccoli = "assets/images/green-fresh-broccoli.png";
+  static String peach = "assets/images/peach-24 1.png";
+  static String pineapple = "assets/images/pineapple-pieces.png";
 }

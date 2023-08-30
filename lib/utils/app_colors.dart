@@ -10,4 +10,6 @@ class AppColors {
   static Color groceryColor = const Color.fromRGBO(243, 239, 250, 1);
   static Color oilColor = const Color.fromRGBO(220, 244, 245, 1);
   static Color householdColor = const Color.fromRGBO(255, 232, 242, 1);
+  static Color containerBackgroundColor =
+      const Color.fromRGBO(244, 245, 249, 1);
 }

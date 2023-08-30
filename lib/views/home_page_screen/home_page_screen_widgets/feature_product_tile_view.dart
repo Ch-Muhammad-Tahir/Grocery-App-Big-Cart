@@ -6,12 +6,22 @@ import 'package:e_commerce_store_ui/widgets/custom_icon_button.dart';
 import 'package:e_commerce_store_ui/widgets/custom_size_box.dart';
 import 'package:flutter/material.dart';
 
+import '../../../models/product_model.dart';
 import '../../../widgets/custom_text_button.dart';
 
 class FeatureProductTileView extends StatelessWidget {
-  final bool isFavorite;
-
-  const FeatureProductTileView({super.key, required this.isFavorite});
+  final ProductModel product;
+  final VoidCallback onTabImage;
+  final VoidCallback onTabFavorite;
+  final VoidCallback onTabSubtract;
+  final VoidCallback onTabAdd;
+  const FeatureProductTileView(
+      {super.key,
+      required this.product,
+      required this.onTabImage,
+      required this.onTabFavorite,
+      required this.onTabSubtract,
+      required this.onTabAdd});
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +39,11 @@ class FeatureProductTileView extends StatelessWidget {
                     Container(
                       height: screenWidth * 0.062,
                       width: screenWidth * 0.12,
-                      color: Colors.amber.shade100,
+                      color:
+                          product.isNew ? Colors.amber.shade100 : Colors.white,
                       child: CustomText(
                         text: "new",
-                        textColor: Colors.orange,
+                        textColor: product.isNew ? Colors.orange : Colors.white,
                         fontSize: screenWidth * 0.038,
                         textAlign: TextAlign.center,
                       ),
@@ -43,32 +54,33 @@ class FeatureProductTileView extends StatelessWidget {
                   height: screenWidth * 0.01,
                 ),
                 InkWell(
-                  onTap: () {
-                    AppCommonFunctions.printLog("Center Pressed");
-                  },
+                  splashColor: Colors.transparent,
+                  onTap: onTabImage,
                   child: Column(
                     children: [
                       Image.asset(
-                        "assets/images/aocado-2 1.png",
+                        product.productImage,
+                        height: screenWidth * 0.2,
+                        width: screenWidth * 0.2,
                       ),
                       SizedBox(
                         height: screenWidth * 0.04,
                       ),
                       CustomText(
-                        text: "\$8.00",
+                        text: "\$${product.productPrice}",
                         fontSize: screenWidth * 0.04,
                         textColor: Colors.green,
                       ),
                       CustomText(
-                        text: "Fresh Fruit",
+                        text: product.productName,
                         fontSize: screenWidth * 0.045,
                         fontWeight: FontWeight.w700,
                       ),
                       SizedBox(
                         height: screenWidth * 0.01,
                       ),
-                      const CustomText(
-                        text: "1.5 lbs",
+                      CustomText(
+                        text: product.productWeight,
                         textColor: Colors.grey,
                         fontWeight: FontWeight.w300,
                       ),
@@ -79,6 +91,7 @@ class FeatureProductTileView extends StatelessWidget {
                   ),
                 ),
                 const Divider(
+                  height: 0,
                   color: Colors.grey,
                   thickness: 1,
                 ),
@@ -89,9 +102,7 @@ class FeatureProductTileView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomTextButton(
-                        onTab: () {
-                          AppCommonFunctions.printLog("- Pressed");
-                        },
+                        onTab: onTabSubtract,
                         text: "-",
                         fontSize: screenWidth * 0.08,
                         textColor: Colors.green,
@@ -102,9 +113,7 @@ class FeatureProductTileView extends StatelessWidget {
                       ),
                       CustomTextButton(
                         fontSize: screenWidth * 0.08,
-                        onTab: () {
-                          AppCommonFunctions.printLog("+ Pressed");
-                        },
+                        onTab: onTabFavorite,
                         text: "+",
                         textColor: Colors.green,
                       ),
@@ -116,19 +125,17 @@ class FeatureProductTileView extends StatelessWidget {
                   right: 10,
                   top: 10,
                   child: CustomIconButton(
+                    splashColor: Colors.transparent,
                     backgroundColor: Colors.transparent,
-                    child: isFavorite
+                    onTab: onTabFavorite,
+                    child: product.isFavorite
                         ? const Icon(
                             Icons.favorite,
                             color: Colors.red,
                           )
                         : const Icon(
-                            Icons.favorite,
-                            color: Colors.red,
+                            Icons.favorite_border_rounded,
                           ),
-                    onTab: () {
-                      print("Heart");
-                    },
                   )),
             ],
           )),

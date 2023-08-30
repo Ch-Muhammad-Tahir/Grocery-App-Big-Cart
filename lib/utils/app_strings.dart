@@ -8,4 +8,15 @@ class AppString {
   static String edibleOil = "Edible oil";
   static String household = "Household";
   static String featuredProducts = "Featured products";
+
+  static String pineapple = "Pineapple";
+  static String pineapplePrice = "8.00";
+  static String blackGrapes = "Black Grapes";
+  static String blackGrapesPrice = "10.00";
+  static String pomegranate = "Pomegranate";
+  static String pomegranatePrice = "20.00";
+  static String roccoli = "Fresh B roccoli";
+  static String roccoliPrice = "5.00";
+  static String freshPeach = "Fresh Peach";
+  static String freshPeachPrice = "15.00";
 }
