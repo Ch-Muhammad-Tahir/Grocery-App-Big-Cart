@@ -18,43 +18,52 @@ class HomePageScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenSize = GetScreenSize.getScreenWidth(context);
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(screenSize * 0.04),
-          child: ListView(children: [
-            HomePageTopSearchBar(
-              controller: searchController,
-              hintText: AppString.searchKeywordHint,
-              prefixIcon: Icons.search,
-              suffixIcon: AppAssets.searchFilterIcon,
-            ),
-            CustomSizeBox(
-              height: screenSize * 0.04,
-            ),
-            CarouselSlider.builder(
-              itemCount: AppConstants.slideImages.length,
-              itemBuilder: (BuildContext context, int index, int realIndex) {
-                return Image.asset(AppConstants.slideImages[index]);
-              },
-              options: CarouselOptions(
-                //height: dynamicSize * 0.8,
-                enableInfiniteScroll: true,
-                initialPage: 0,
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: screenSize * 0.04),
+        child: Column(children: [
+          SizedBox(
+            height: AppBar().preferredSize.height,
+          ),
+          HomePageTopSearchBar(
+            controller: searchController,
+            hintText: AppString.searchKeywordHint,
+            prefixIcon: Icons.search,
+            suffixIcon: AppAssets.searchFilterIcon,
+          ),
+          CustomSizeBox(
+            height: screenSize * 0.04,
+          ),
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                CarouselSlider.builder(
+                  itemCount: AppConstants.slideImages.length,
+                  itemBuilder:
+                      (BuildContext context, int index, int realIndex) {
+                    return Image.asset(AppConstants.slideImages[index]);
+                  },
+                  options: CarouselOptions(
+                    //height: dynamicSize * 0.8,
+                    enableInfiniteScroll: true,
+                    initialPage: 0,
 
-                viewportFraction: 0.7,
-                enlargeCenterPage: true,
-                autoPlay: true,
-                autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                autoPlayInterval: const Duration(seconds: 3),
-              ),
+                    viewportFraction: 0.7,
+                    enlargeCenterPage: true,
+                    autoPlay: true,
+                    autoPlayAnimationDuration:
+                        const Duration(milliseconds: 800),
+                    autoPlayInterval: const Duration(seconds: 3),
+                  ),
+                ),
+                const CategorySection(),
+                CustomSizeBox(height: screenSize * 0.03),
+                const FeatureSection(),
+              ],
             ),
-            CustomSizeBox(height: screenSize * 0.03),
-            const CategorySection(),
-            CustomSizeBox(height: screenSize * 0.03),
-            const FeatureSection(),
-          ]),
-        ),
+          )
+        ]),
       ),
     );
   }
