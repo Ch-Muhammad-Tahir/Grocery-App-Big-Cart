@@ -1,6 +1,5 @@
-import 'package:e_commerce_store_ui/utils/app_assets.dart';
 import 'package:e_commerce_store_ui/utils/app_colors.dart';
-import 'package:e_commerce_store_ui/utils/app_strings.dart';
+
 import 'package:e_commerce_store_ui/utils/media_query.dart';
 import 'package:e_commerce_store_ui/views/onboarding_screen/onboarding_screen/custom_circle.dart';
 import 'package:e_commerce_store_ui/widgets/customText.dart';

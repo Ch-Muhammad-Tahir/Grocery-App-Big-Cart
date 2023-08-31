@@ -1,9 +1,7 @@
-import 'package:e_commerce_store_ui/utils/app_colors.dart';
-import 'package:e_commerce_store_ui/utils/helper_functions.dart';
 import 'package:e_commerce_store_ui/utils/media_query.dart';
 import 'package:e_commerce_store_ui/widgets/customText.dart';
 import 'package:e_commerce_store_ui/widgets/custom_icon_button.dart';
-import 'package:e_commerce_store_ui/widgets/custom_size_box.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../models/product_model.dart';

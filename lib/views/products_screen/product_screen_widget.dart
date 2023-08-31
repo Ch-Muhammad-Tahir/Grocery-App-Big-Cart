@@ -1,5 +1,5 @@
 import 'package:e_commerce_store_ui/utils/media_query.dart';
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../utils/app_assets.dart';

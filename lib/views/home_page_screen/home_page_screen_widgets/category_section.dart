@@ -1,6 +1,5 @@
-import 'package:e_commerce_store_ui/models/category_model.dart';
 import 'package:e_commerce_store_ui/utils/app_assets.dart';
-import 'package:e_commerce_store_ui/utils/app_colors.dart';
+
 import 'package:e_commerce_store_ui/utils/app_constants.dart';
 import 'package:e_commerce_store_ui/views/category_screen/category_screen_widget.dart';
 import 'package:e_commerce_store_ui/views/home_page_screen/home_page_screen_widgets/category_tile_view.dart';
@@ -9,8 +8,6 @@ import 'package:e_commerce_store_ui/widgets/custom_size_box.dart';
 import '../../../utils/app_strings.dart';
 import '../../../utils/helper_functions.dart';
 import '../../../utils/media_query.dart';
-import '../../../widgets/customText.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,3 @@
-import 'package:e_commerce_store_ui/utils/app_colors.dart';
 import 'package:e_commerce_store_ui/utils/app_constants.dart';
 
 import '../../../utils/app_assets.dart';
