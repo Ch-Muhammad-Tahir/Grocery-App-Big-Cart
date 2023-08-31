@@ -136,7 +136,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     CustomSizeBox(
                       height: screenSize * 0.06,
                     ),
-                    CustomTextIconButton()
+                    CustomTextIconButton(
+                      text: AppString.btnAddToCard,
+                      onTab: () {},
+                    )
                   ],
                 ),
               ),

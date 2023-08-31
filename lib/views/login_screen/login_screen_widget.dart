@@ -1,7 +1,7 @@
 import 'package:e_commerce_store_ui/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/image_welcom_stack.dart';
+import '../../widgets/welcom_image_portion.dart';
 
 class LoginScreenWidget extends StatelessWidget {
   const LoginScreenWidget({super.key});
@@ -9,20 +9,9 @@ class LoginScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenSize = GetScreenSize.getScreenWidth(context);
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            //WelcomeImageStack(),
-            Positioned(
-              bottom: 10,
-              child: Container(
-                color: Colors.amber,
-                height: screenSize * 1,
-              ),
-            )
-          ],
-        ),
+    return Scaffold(
+      body: Column(
+        children: [WelcomeImagePortionWidget()],
       ),
     );
   }

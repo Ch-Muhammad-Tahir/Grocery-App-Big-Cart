@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static Color whiteText = Colors.white;
+  static Color whiteBackground = Colors.white;
+  static Color greyText = Colors.grey;
+  static Color whiteContainer = Colors.white;
   static Color blackText = Colors.black;
   static Color topSearchBarColor = const Color.fromRGBO(235, 242, 245, 1);
   static Color vegetableColor = const Color.fromRGBO(230, 242, 234, 1);

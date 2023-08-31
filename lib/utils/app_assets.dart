@@ -25,4 +25,10 @@ class AppAssets {
   static String roccoli = "assets/images/green-fresh-broccoli.png";
   static String peach = "assets/images/peach-24 1.png";
   static String pineapple = "assets/images/pineapple-pieces.png";
+  static String onboardingScreenImage_1 =
+      "assets/images/element5-digital-CpBBsda2eRI-unsplash.png";
+  static String onboardingScreenImage_2 =
+      "assets/images/element5-digital-CpBBsda2eRI-unsplash (1).png";
+  static String onboardingScreenImage_3 =
+      "assets/images/element5-digital-CpBBsda2eRI-unsplash (2).png";
 }

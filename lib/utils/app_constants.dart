@@ -77,4 +77,16 @@ class AppConstants {
     AppAssets.image4,
     AppAssets.image2,
   ];
+
+  static List<String> onBoardingImages = [
+    AppAssets.onboardingScreenImage_1,
+    AppAssets.onboardingScreenImage_2,
+    AppAssets.onboardingScreenImage_3
+  ];
+
+  static List<String> onBoardingTitle = [
+    AppString.onBoardingTitle_1,
+    AppString.onBoardingTitle_2,
+    AppString.onBoardingTitle_3,
+  ];
 }

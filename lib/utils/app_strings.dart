@@ -19,4 +19,13 @@ class AppString {
   static String roccoliPrice = "5.00";
   static String freshPeach = "Fresh Peach";
   static String freshPeachPrice = "15.00";
+
+  static String onBoardingTitle_1 = "Premium Food\nAt Your Doorstep";
+  static String onBoardingTitle_2 = "Buy Premium\nQuality Fruits";
+  static String onBoardingTitle_3 = "Buy Quality\nDairy Products";
+  static String onBoardingTitle_4 = "Get Discounts\nOn All Products";
+  static String onBoardingSubTitle =
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy";
+  static String btnAddToCard = "Add To Cart";
+  static String btnGetStarted = "Get Started";
 }
